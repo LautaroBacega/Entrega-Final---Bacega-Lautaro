@@ -1,3 +1,6 @@
+npm i express
+npm start
+
 ---------- Create Product ----------
 POST localhost:8080/products
 
