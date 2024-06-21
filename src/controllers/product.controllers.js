@@ -23,32 +23,6 @@ export const getAll = async (req, res, next) => {
   }
 };
 
-/* export const getAll = async (req, res, next) => {
-  try {
-    const { page, limit, name, sort } = req.query;
-    const response = await service.getAll(page, limit, name, sort);
-    // let url = `http://localhost:8080/products?page=${response.nextPage}`
-    // if(sort !== undefined) url + `&sort=${sort}`
-    const nextLink = response.hasNextPage ? `http://localhost:8080/products?page=${response.nextPage}` : null;
-    const prevLink = response.hasPrevPage ? `http://localhost:8080/products?page=${response.prevPage}` : null;
-    res.status(200).json({
-      status: 'success',
-      payload: response.docs,
-      totalPages: response.totalDocs,
-      prevPage: response.prevPage,
-      nextPage: response.nextPage,
-      page,
-      hasNextPage: response.hasNextPage,
-      hasPrevPage: response.hasPrevPage,
-      prevLink,
-      nextLink
-    });
-  } catch (error) {
-    next(error.message);
-  }
-}; */
-
-
 export const getById = async (req, res, next) => {
   try {
     const { id } = req.params;
